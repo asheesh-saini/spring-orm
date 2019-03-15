@@ -2,10 +2,13 @@ package com.ashu.entity;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "students")
 public class StudentEntity implements Serializable{
 	
 	private String id;
@@ -19,7 +22,7 @@ public class StudentEntity implements Serializable{
 	public void setId(String id) {
 		this.id = id;
 	}
-
+	@Column(name="name")
 	public String getName() {
 		return name;
 	}
